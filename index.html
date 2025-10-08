@@ -125,6 +125,38 @@
     .item-3 {
       background-image: url('images/nightrun.jpg');
     }
+
+    .logo-glow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 6rem;
+  color: #ff1e1e;
+  text-shadow:
+    0 0 10px #ff1e1e,
+    0 0 20px #ff1e1e,
+    0 0 40px #ff1e1e,
+    0 0 80px #ff1e1e;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow:
+      0 0 5px #ff1e1e,
+      0 0 15px #ff1e1e,
+      0 0 30px #ff1e1e,
+      0 0 60px #ff1e1e;
+    color: #ff2b2b;
+  }
+  100% {
+    text-shadow:
+      0 0 15px #ff3c3c,
+      0 0 40px #ff1e1e,
+      0 0 80px #ff1e1e,
+      0 0 100px #ff1e1e;
+    color: #fff;
+  }
+}
+
   </style>
 </head>
 
@@ -147,10 +179,11 @@
   </nav>
 
   <header>
-    <h1>REDLINE REBELS</h1>
-    <p>Where the streets meet the redline.</p>
-    <a href="#" class="btn btn-redline btn-lg">Join the Crew</a>
-  </header>
+  <h1 class="logo-glow">REDLINE REBELS</h1>
+  <p>Where the streets meet the redline.</p>
+  <a href="#" class="btn btn-redline btn-lg">Join the Crew</a>
+</header>
+
 
   <section class="content">
     <div class="container text-center">
