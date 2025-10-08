@@ -126,35 +126,81 @@
       background-image: url('images/nightrun.jpg');
     }
 
-    .logo-glow {
+   .logo-glow {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 6rem;
+  letter-spacing: 3px;
+  text-align: center;
+  user-select: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.red-part {
   color: #ff1e1e;
   text-shadow:
     0 0 10px #ff1e1e,
     0 0 20px #ff1e1e,
-    0 0 40px #ff1e1e,
-    0 0 80px #ff1e1e;
-  animation: pulseGlow 2s infinite alternate;
+    0 0 40px #ff1e1e;
+  animation: redGlow 2.5s infinite alternate;
+  transition: all 0.3s ease;
 }
 
-@keyframes pulseGlow {
+.gold-part {
+  color: #ffd700;
+  text-shadow:
+    0 0 10px #ffd700,
+    0 0 20px #ffd700,
+    0 0 40px #ffd700;
+  animation: goldGlow 2.5s infinite alternate;
+  transition: all 0.3s ease;
+}
+
+@keyframes redGlow {
   0% {
     text-shadow:
       0 0 5px #ff1e1e,
       0 0 15px #ff1e1e,
-      0 0 30px #ff1e1e,
-      0 0 60px #ff1e1e;
-    color: #ff2b2b;
+      0 0 30px #ff1e1e;
   }
   100% {
     text-shadow:
-      0 0 15px #ff3c3c,
+      0 0 20px #ff3c3c,
       0 0 40px #ff1e1e,
-      0 0 80px #ff1e1e,
-      0 0 100px #ff1e1e;
-    color: #FFD700;
+      0 0 60px #ff1e1e;
   }
+}
+
+@keyframes goldGlow {
+  0% {
+    text-shadow:
+      0 0 5px #ffd700,
+      0 0 15px #ffd700,
+      0 0 30px #ffcc33;
+  }
+  100% {
+    text-shadow:
+      0 0 20px #ffe066,
+      0 0 40px #ffd700,
+      0 0 60px #ffcc33;
+  }
+}
+
+.logo-glow:hover .red-part {
+  color: #ff4d4d;
+  text-shadow:
+    0 0 20px #ff1e1e,
+    0 0 50px #ff1e1e,
+    0 0 100px #ff1e1e;
+  transform: scale(1.05);
+}
+
+.logo-glow:hover .gold-part {
+  color: #fff6b3;
+  text-shadow:
+    0 0 25px #ffd700,
+    0 0 60px #ffd700,
+    0 0 120px #ffcc33;
+  transform: scale(1.05);
 }
 
   </style>
@@ -179,10 +225,14 @@
   </nav>
 
   <header>
-  <h1 class="logo-glow">REDLINE REBELS</h1>
+  <h1 class="logo-glow">
+    <span class="red-part">REDLINE</span>
+    <span class="gold-part">REBELS</span>
+  </h1>
   <p>Where the streets meet the redline.</p>
   <a href="#" class="btn btn-redline btn-lg">Join the Crew</a>
 </header>
+
 
 
   <section class="content">
