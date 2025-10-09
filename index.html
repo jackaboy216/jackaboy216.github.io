@@ -143,27 +143,52 @@
   transition: all 0.3s ease;
 }
 
+@media (max-width: 767px) {
+  .navbar-collapse ul.nav {
+    text-align: center;      /* center text on mobile */
+    float: none !important;  /* remove default float */
+  }
+
+  .navbar-collapse ul.nav li {
+    display: block;          /* make each item full width */
+    margin: 10px 0;          /* optional spacing */
+  }
+}
+
+
 
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">REDLINE REBELS</a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Crew</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Join</a></li>
-        </ul>
-      </div>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <span class="red-part">REDLINE</span>
+        <span class="gold-part">REBELS</span>
+      </a>
     </div>
-  </nav>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Crew</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Join</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
   <header>
   <h1 class="logo-glow">
@@ -180,7 +205,7 @@
     <div class="container text-center">
       <h2 class="section-heading">The Crew</h2>
       <p>Redline Rebels isn’t just a name — it’s a movement. We live for late-night cruises, burnout smoke, and the
-        scream of engines hitting redline. Whether it’s JDM, Euro, or muscle — if it’s fast, it’s family.</p>
+        scream of engines hitting redline. Whether it’s JDM, Euro, or muscle — if it drives, it’s family.</p>
       <img src="images/group.jpg" class="img-responsive center-block img-circle" style="max-width: 300px;" alt="">
     </div>
   </section>
@@ -189,7 +214,7 @@
     <div class="container text-center">
       <h2 class="section-heading">Upcoming Meets</h2>
       <p>We host regular meets, track days, and night runs across the city. Wanna roll with us? Check the events page
-        and show up — no trailer queens, no posers.</p>
+        and show up.</p>
       <a href="#" class="btn btn-redline btn-lg">View Events</a>
     </div>
   </section>
@@ -209,7 +234,7 @@
   </div>
 
   <footer>
-    <p>&copy; 2025 Redline Rebels | Built with 🔥 and octane</p>
+    <p>&copy; 2025 Redline Rebels | Built with 🔥 and Fuel</p>
   </footer>
 
   <script src="js/jquery-1.11.3.min.js"></script>
