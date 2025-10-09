@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Redline Rebels</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/custom.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap"
     rel="stylesheet">
+
   <style>
     body {
       background-color: #0d0d0d;
@@ -28,12 +28,13 @@
       font-size: 1.8em;
     }
 
-    .navbar-nav>li>a {
+    .navbar-nav > li > a {
       color: #fff !important;
       font-weight: 500;
+      transition: color 0.3s ease;
     }
 
-    .navbar-nav>li>a:hover {
+    .navbar-nav > li > a:hover {
       color: #ff1e1e !important;
     }
 
@@ -47,32 +48,66 @@
       flex-direction: column;
     }
 
-    header h1 {
+    /* ✨ Clean glowing logo — no blur, just color and hover */
+    .logo-glow {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 5rem;
+      font-size: 6rem;
+      letter-spacing: 3px;
+      text-align: center;
+      user-select: none;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .red-part {
       color: #ff1e1e;
-      text-shadow: 0 0 10px #ff1e1e;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .gold-part {
+      color: #ffd700;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .logo-glow:hover .red-part {
+      color: #ff4d4d;
+      transform: scale(1.05);
+    }
+
+    .logo-glow:hover .gold-part {
+      color: #fff6b3;
+      transform: scale(1.05);
     }
 
     header p {
       font-size: 1.2rem;
       color: #ddd;
+      margin-top: 10px;
     }
 
     .btn-redline {
       background-color: #ff1e1e;
       color: #fff;
       border: none;
+      padding: 12px 30px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .btn-redline:hover {
       background-color: #ff4d4d;
+      transform: scale(1.05);
     }
 
     .section-heading {
       font-family: 'Bebas Neue', sans-serif;
       color: #ff1e1e;
       letter-spacing: 1px;
+      margin-bottom: 30px;
     }
 
     .content {
@@ -82,17 +117,6 @@
 
     .content-2 {
       background-color: #1a1a1a;
-    }
-
-    footer {
-      background-color: #111;
-      color: #777;
-      padding: 30px 0;
-      text-align: center;
-    }
-
-    footer p {
-      margin: 0;
     }
 
     .promo-item {
@@ -126,37 +150,16 @@
       background-image: url('images/nightrun.jpg');
     }
 
-  .logo-glow {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 6rem;
-  letter-spacing: 3px;
-  text-align: center;
-  user-select: none;
-  transition: all 0.4s ease-in-out;
-}
+    footer {
+      background-color: #111;
+      color: #777;
+      padding: 30px 0;
+      text-align: center;
+    }
 
-.red-part {
-  color: #ff1e1e;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.gold-part {
-  color: #ffd700;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover effects */
-.logo-glow:hover .red-part {
-  color: #ff4d4d;
-  transform: scale(1.05);
-}
-
-.logo-glow:hover .gold-part {
-  color: #ffe866;
-  transform: scale(1.05);
-}
-
-
+    footer p {
+      margin: 0;
+    }
   </style>
 </head>
 
@@ -179,15 +182,13 @@
   </nav>
 
   <header>
-  <h1 class="logo-glow">
-    <span class="red-part">REDLINE</span>
-    <span class="gold-part">REBELS</span>
-  </h1>
-  <p>Where the streets meet the redline.</p>
-  <a href="#" class="btn btn-redline btn-lg">Join the Crew</a>
-</header>
-
-
+    <h1 class="logo-glow">
+      <span class="red-part">REDLINE</span>
+      <span class="gold-part">REBELS</span>
+    </h1>
+    <p>Where the streets meet the redline.</p>
+    <a href="#" class="btn btn-redline btn-lg">Join the Crew</a>
+  </header>
 
   <section class="content">
     <div class="container text-center">
