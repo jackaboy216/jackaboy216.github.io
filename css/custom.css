@@ -191,6 +191,22 @@ header p {
   box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
 }
 
+.card-image-wrap {
+    width: 150px;      /* Set a fixed width */
+    height: 150px;     /* Set the same fixed height */
+    margin: 0 auto 20px; /* Center it and add space below */
+    overflow: hidden;  /* Hide anything that doesn't fit the circle */
+    border-radius: 50%; /* Makes the container a circle */
+    border: 3px solid #ff1e1e; /* Optional: adds a red ring around the member */
+}
+
+.card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* CRITICAL: This crops the image to fit without stretching it */
+    display: block;
+}
+
 /* Hover Effect: Red glow and slight lift */
 .crew-card:hover {
   transform: translateY(-12px);
