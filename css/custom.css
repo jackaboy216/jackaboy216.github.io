@@ -12,38 +12,67 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* ===================== Navbar ===================== */
+/* ===================== Navbar Overhaul ===================== */
 .navbar {
-  background-color: #111;
+  background-color: rgba(10, 10, 10, 0.95); /* Deep black with slight transparency */
   border: none;
+  border-bottom: 2px solid #ffd700; /* Thin Gold line at the bottom */
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand {
-  color: #ff1e1e !important;
   font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2em !important;
   letter-spacing: 2px;
-  font-size: 1.8em;
+  padding: 15px;
+  display: flex;
+  align-items: center;
 }
 
-.navbar-nav>li>a {
-  color: #fff !important;
-  font-weight: 500;
+/* Nav Link Styling */
+.navbar-nav > li > a {
+  color: #ffffff !important;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  padding: 15px 20px !important;
 }
 
-.navbar-nav>li>a:hover {
-  color: #ff1e1e !important;
+/* Hover State */
+.navbar-nav > li > a:hover {
+  color: #ff1e1e !important; /* Glows Red on hover */
+  background: transparent !important;
+  text-shadow: 0 0 8px rgba(255, 30, 30, 0.6);
 }
 
-/* Active page link */
+/* Active Page Link - Racing "Tab" Style */
 #active > a {
-  color: #ffd700 !important;
-  background-color: #ff1e1e;
-  border-radius: 2rem;
+  color: #000 !important; /* Dark text on active */
+  background-color: #ffd700 !important; /* Gold background for active page */
+  border-radius: 4px; /* Slightly rounded, not a pill */
+  font-weight: bold;
 }
 
 #active > a:hover {
-  color: #ffe862 !important;
-  background-color: #ff7575;
+  background-color: #ff1e1e !important; /* Turns Red if you hover active link */
+  color: #fff !important;
+}
+
+/* Navbar Toggle (Mobile Burger Menu) */
+.navbar-toggle {
+  border-color: #ffd700;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #ff1e1e;
+}
+
+.navbar-toggle:hover {
+  background-color: #222 !important;
 }
 
 /* ===================== Header ===================== */
@@ -97,6 +126,364 @@ header p {
 .content-2 {
   background-color: #1a1a1a;
   flex: 1 0 auto;
+}
+
+/* ===================== Crew Section Styles ===================== */
+.crew-section {
+  background-color: #181818 !important; /* Deep black for contrast */
+}
+
+.crew-section .lead {
+  line-height: 1.8;
+  font-size: 1.25em;
+  color: #f4f4f4;
+  margin-bottom: 25px;
+}
+
+.crew-description {
+  line-height: 1.8;
+  color: #aaaaaa;
+  margin-bottom: 40px;
+}
+
+/* Image Styling with Red/Gold Glow */
+.crew-image-wrapper {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+}
+
+.crew-img {
+  max-width: 300px;
+  border: 4px solid #ff1e1e; /* Red Border */
+  outline: 2px solid #ffd700; /* Gold Outer Ring */
+  outline-offset: 8px;
+  box-shadow: 0px 0px 30px rgba(255, 30, 30, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.crew-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 40px rgba(255, 215, 0, 0.4); /* Glow turns gold on hover */
+}
+
+/* ===================== Crew Card Styles ===================== */
+.crew-list-section {
+  background-color: #0d0d0d;
+}
+
+.crew-card {
+  background: #1a1a1a;
+  /* Increase padding to pull content away from the edges */
+  padding: 40px 30px; 
+  border-radius: 12px;
+  border-bottom: 4px solid #ffd700;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-bottom: 40px;
+  
+  /* Prevent the card from stretching too wide on large monitors */
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Add a subtle inner shadow to give it depth */
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* Hover Effect: Red glow and slight lift */
+.crew-card:hover {
+  transform: translateY(-12px);
+  background: #222;
+  border-bottom: 4px solid #ff1e1e; /* Red accent on hover */
+  box-shadow: 0px 15px 35px rgba(255, 30, 30, 0.15);
+}
+
+.card-image-wrap img {
+  max-width: 150px;
+  border: 3px solid #333;
+  padding: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.crew-card:hover .card-image-wrap img {
+  border-color: #ffd700; /* Circle glows gold on card hover */
+}
+
+.member-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.car-model {
+  color: #ffd700; /* Making the car model gold for better contrast */
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.member-badge {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px 15px;
+  background-color: #ff1e1e;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  border-radius: 3px;
+  letter-spacing: 1px;
+}
+
+.card-image-wrap img {
+  max-width: 160px;
+  border: 4px solid #252525;
+  padding: 5px;
+  background: #111; /* Creates a "frame" effect around the photo */
+  transition: all 0.3s ease;
+}
+
+.crew-card:hover .card-image-wrap img {
+  border-color: #ff1e1e;
+  transform: scale(1.05);
+}
+
+/* ===================== Future-Proof Masonry Gallery ===================== */
+.gallery-section {
+  background-color: #0a0a0a;
+  padding-bottom: 100px;
+}
+
+.gallery-masonry {
+  /* Dynamic columns based on screen size */
+  column-count: 3;
+  column-gap: 20px;
+  width: 100%;
+}
+
+.gallery-item {
+  display: inline-block; /* Essential for masonry stacking */
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #222;
+  background: #111;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto; /* Keeps the car's actual shape */
+  filter: grayscale(20%);
+  transition: all 0.5s ease;
+}
+
+/* Hover Effects */
+.gallery-item:hover {
+  border-color: #ffd700; /* Gold Border */
+  box-shadow: 0 0 25px rgba(212, 0, 0, 0.5); /* Red Glow */
+  transform: translateY(-5px);
+  z-index: 2;
+}
+
+.gallery-item:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* The "View" Overlay */
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(212, 0, 0, 0.3); /* Subtle Red Tint */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.view-text {
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  border: 2px solid #ffd700; /* Gold Button inside */
+  padding: 4px 12px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+  .gallery-masonry { column-count: 2; } /* Tablets */
+}
+
+@media (max-width: 767px) {
+  .gallery-masonry { column-count: 1; } /* Phones */
+}
+
+/* ===================== Events Page ===================== */
+.event-section {
+  background-color: #0d0d0d;
+}
+
+.events-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-left: 5px solid #ff1e1e; /* Red racing stripe */
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.event-item:hover {
+  transform: scale(1.02);
+  background: #222;
+  box-shadow: 0 5px 15px rgba(255, 30, 30, 0.2);
+}
+
+/* The Gold Date Box */
+.event-date {
+  background-color: #ffd700;
+  color: #000;
+  padding: 10px;
+  min-width: 80px;
+  text-align: center;
+  border-radius: 4px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.event-date .day {
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.event-date .month {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Details Section */
+.event-details {
+  flex-grow: 1;
+  padding: 0 30px;
+}
+
+.event-details h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-top: 0;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.event-details p {
+  margin: 2px 0;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.event-details .glyphicon {
+  color: #ffd700; /* Gold icons */
+  margin-right: 8px;
+}
+
+/* Action Button */
+.event-action .btn-redline {
+  font-family: 'Bebas Neue', sans-serif;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+}
+
+/* Mobile Fix */
+@media (max-width: 767px) {
+  .event-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .event-details {
+    padding: 20px 0;
+  }
+}
+
+/* ===================== Join Page Styling ===================== */
+.join-section {
+  background-color: #0a0a0a;
+}
+
+.join-card {
+  max-width: 550px;
+  margin: 0 auto;
+  background: #161616;
+  padding: 40px;
+  border-radius: 8px;
+  border-top: 4px solid #ff1e1e; /* Red top accent */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  text-align: left;
+}
+
+.join-card label {
+  color: #ffd700; /* Gold Labels */
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.custom-input {
+  background-color: #0d0d0d !important;
+  border: 1px solid #333 !important;
+  color: #fff !important;
+  border-radius: 0; /* Sharp corners look more aggressive */
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+textarea.custom-input {
+  height: auto;
+}
+
+.custom-input:focus {
+  border-color: #ff1e1e !important;
+  box-shadow: 0 0 10px rgba(255, 30, 30, 0.2) !important;
+  outline: none;
+}
+
+/* Instagram @ prefix styling */
+.input-group-addon {
+  background-color: #222;
+  border: 1px solid #333;
+  color: #ffd700;
+  border-radius: 0;
+}
+
+.btn-block {
+  margin-top: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
 }
 
 /* ===================== Footer ===================== */

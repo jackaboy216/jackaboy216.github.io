@@ -40,25 +40,52 @@
     </div>
   </nav>
 
-  <section class="content">
-    <div class="container text-center">
-      <h2 class="section-heading">Join the Crew</h2>
+  <section class="content join-section">
+  <div class="container text-center">
+    <h2 class="section-heading">Join the <span class="gold-part">Family</span></h2>
+    <p style="color: #888; margin-bottom: 40px;">We don't care what you drive, as long as you drive it with heart. Fill out the form below to apply.</p>
 
-      <form id="joinForm" style="max-width:500px;margin:auto;">
-        <input type="text" name="name" class="form-control" placeholder="Name (required)" required><br>
-        <input type="text" name="car" class="form-control" placeholder="Car (required)" required><br>
-        <input type="email" name="email" class="form-control" placeholder="Email (required)" required><br>
-        <input type="text" name="instagram" class="form-control" placeholder="Instagram (optional)"><br>
-        <textarea name="message" class="form-control" placeholder="Why do you want to join? (optional)" required></textarea><br>
-        <button class="btn btn-redline" type="submit">Submit</button>
+    <div class="join-card">
+      <form id="joinForm">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" name="name" class="form-control custom-input" placeholder="Your Name" required>
+        </div>
+        
+        <div class="form-group">
+          <label>The Ride</label>
+          <input type="text" name="car" class="form-control custom-input" placeholder="Year / Make / Model" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" class="form-control custom-input" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>Instagram Handle (Optional)</label>
+          <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" name="instagram" class="form-control custom-input" placeholder="username">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Your Story</label>
+          <textarea name="message" class="form-control custom-input" rows="4" placeholder="Tell us about your build and why you want to join..." required></textarea>
+        </div>
+
+        <button class="btn btn-redline btn-block btn-lg" type="submit" id="submitBtn">
+          SUBMIT APPLICATION
+        </button>
       </form>
 
-      <div id="successMessage" style="margin-top:20px;color:#ffd700;display:none;">
-        Application sent! We’ll contact you soon.
+      <div id="successMessage" class="alert alert-success" style="display:none; margin-top:20px; background: #ffd700; color: #000; border:none;">
+        <strong>Application Received!</strong> We'll reach out to you on the streets soon.
       </div>
-
     </div>
-  </section>
+  </div>
+</section>
 
   <footer>
     <p>&copy; 2025 Redline Rebels | Built with Spark and Fuel</p>
@@ -71,21 +98,31 @@
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
     (function () {
-      emailjs.init("iQTvxdUSckDil3CD3");
-    })();
+    emailjs.init("iQTvxdUSckDil3CD3");
+  })();
 
-    document.getElementById("joinForm").addEventListener("submit", function (e) {
-      e.preventDefault();
+  document.getElementById("joinForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+  
+    const btn = document.getElementById("submitBtn");
+    const originalText = btn.innerHTML;
+  
+    // Show loading state
+    btn.innerHTML = "SENDING...";
+    btn.disabled = true;
 
-      emailjs.sendForm("service_4365lyg", "template_ss3kvb8", this)
-        .then(function () {
-          document.getElementById("successMessage").style.display = "block";
-          document.getElementById("joinForm").reset();
-        }, function (error) {
-          alert("Failed to send. Try again later.");
-          console.error("EmailJS error:", error);
-        });
-    });
+    emailjs.sendForm("service_4365lyg", "template_ss3kvb8", this)
+      .then(function () {
+       document.getElementById("successMessage").style.display = "block";
+       document.getElementById("joinForm").reset();
+       btn.innerHTML = "SENT!";
+      }, function (error) {
+       alert("Failed to send. Check your connection.");
+       btn.innerHTML = originalText;
+        btn.disabled = false;
+       console.error("EmailJS error:", error);
+      });
+  });
   </script>
 </body>
 
