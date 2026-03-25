@@ -244,14 +244,24 @@ header p {
 
 .member-badge {
   display: inline-block;
-  margin-top: 15px;
-  padding: 5px 15px;
+  margin-top: 20px;
+  padding: 8px 25px; /* Increased padding for a chunkier look */
   background-color: #ff1e1e;
   color: #fff;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1rem;
-  border-radius: 3px;
-  letter-spacing: 1px;
+  font-size: 1.4rem; /* Bumped up from 1rem */
+  border-radius: 4px;
+  letter-spacing: 2px; /* Spread the letters for better readability */
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(255, 30, 30, 0.3); /* Gives it a "3D" feel */
+  transition: all 0.3s ease;
+}
+
+/* Subtle effect: the badge glows more when the whole card is hovered */
+.crew-card:hover .member-badge {
+  background-color: #ff3333;
+  box-shadow: 0 6px 15px rgba(255, 30, 30, 0.5);
+  transform: scale(1.05);
 }
 
 .card-image-wrap img {
