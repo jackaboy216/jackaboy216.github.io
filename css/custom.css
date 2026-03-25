@@ -198,6 +198,21 @@ header p {
   box-shadow: 0px 15px 35px rgba(255, 30, 30, 0.15);
 }
 
+/* Prevent blue links on crew cards */
+.crew-list-section a, 
+.crew-list-section a:hover, 
+.crew-list-section a:focus {
+    text-decoration: none !important;
+    color: inherit !important; /* This keeps your original white/gold colors */
+}
+
+/* Ensure the hover animation still feels smooth through the link */
+.crew-list-section a:hover .crew-card {
+    transform: translateY(-12px);
+    background: #222;
+    border-bottom: 4px solid #ff1e1e;
+}
+
 .card-image-wrap img {
   max-width: 150px;
   border: 3px solid #333;
