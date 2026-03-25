@@ -40,30 +40,69 @@
     </div>
   </nav>
 
-  <section class="content join-section">
+<section class="content" style="background-color: #050505; border-top: 1px solid #222; padding: 60px 0;">
   <div class="container text-center">
-    <h2 class="section-heading">Join the <span class="gold-part">Family</span></h2>
-    <p style="color: #888; margin-bottom: 40px;">We don't care what you drive, as long as you drive it with heart. Fill out the form below to apply.</p>
+    <h2 class="section-heading">The <span class="gold-part">Code</span></h2>
+    <p style="color: #666; margin-bottom: 40px; letter-spacing: 1px;">How we roll. No exceptions.</p>
+    
+    <div class="row">
+  <div class="col-md-4">
+    <div style="margin-bottom: 20px;">
+      <i class="glyphicon glyphicon-heart" style="font-size: 35px; color: #ff1e1e;"></i>
+    </div>
+    <h3 style="font-family: 'Bebas Neue'; letter-spacing: 1px; color: #fff;">Real Passion</h3>
+    <p style="color: #888; padding: 0 15px;">Whether it’s a supercar or a project in the works, we’re here for the love of the build. Every car has a story, and we're always down to hear yours.</p>
+  </div>
+
+  <div class="col-md-4">
+    <div style="margin-bottom: 20px;">
+      <i class="glyphicon glyphicon-ok-circle" style="font-size: 35px; color: #ffd700;"></i>
+    </div>
+    <h3 style="font-family: 'Bebas Neue'; letter-spacing: 1px; color: #fff;">Keep it Chill</h3>
+    <p style="color: #888; padding: 0 15px;">We love our meet spots and want to keep them. We keep things relaxed and clean so we can enjoy the space together for a long time to come.</p>
+  </div>
+
+  <div class="col-md-4">
+    <div style="margin-bottom: 20px;">
+      <i class="glyphicon glyphicon-transfer" style="font-size: 35px; color: #ff1e1e;"></i>
+    </div>
+    <h3 style="font-family: 'Bebas Neue'; letter-spacing: 1px; color: #fff;">The Open Door</h3>
+    <p style="color: #888; padding: 0 15px;">Whether you're there for the whole night or just stopping by to say hi. We’re about the passion, not the clock.</p>
+  </div>
+</div>
+  </div>
+</section>
+
+
+
+<section class="content join-section">
+  <div class="container text-center">
+    <h2 class="section-heading">Roll with the <span class="gold-part">Family</span></h2>
+    <p style="color: #888; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+      We’re always looking for good people and cool builds to add to the mix. 
+      Whether your car is a finished masterpiece or a work in progress, we’d love to see it. 
+      Drop your details below and let’s connect!
+    </p>
 
     <div class="join-card">
       <form id="joinForm">
         <div class="form-group">
-          <label>Full Name</label>
+          <label>What should we call you?</label>
           <input type="text" name="name" class="form-control custom-input" placeholder="Your Name" required>
         </div>
         
         <div class="form-group">
-          <label>The Ride</label>
+          <label>What are you driving?</label>
           <input type="text" name="car" class="form-control custom-input" placeholder="Year / Make / Model" required>
         </div>
 
         <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" name="email" class="form-control custom-input" placeholder="name@example.com" required>
+          <label>Best way to reach you?</label>
+          <input type="email" name="email" class="form-control custom-input" placeholder="Email Address" required>
         </div>
 
         <div class="form-group">
-          <label>Instagram Handle (Optional)</label>
+          <label>Instagram Handle (So we can see the build!)</label>
           <div class="input-group">
             <span class="input-group-addon">@</span>
             <input type="text" name="instagram" class="form-control custom-input" placeholder="username">
@@ -71,25 +110,45 @@
         </div>
 
         <div class="form-group">
-          <label>Your Story</label>
-          <textarea name="message" class="form-control custom-input" rows="4" placeholder="Tell us about your build and why you want to join..." required></textarea>
+          <label>Tell us a bit about yourself</label>
+          <textarea name="message" class="form-control custom-input" rows="4" placeholder="What got you into cars? Any favorite mods?" required></textarea>
         </div>
 
         <button class="btn btn-redline btn-block btn-lg" type="submit" id="submitBtn">
-          SUBMIT APPLICATION
+          SEND TO THE CREW
         </button>
       </form>
 
       <div id="successMessage" class="alert alert-success" style="display:none; margin-top:20px; background: #ffd700; color: #000; border:none;">
-        <strong>Application Received!</strong> We'll reach out to you on the streets soon.
+        <strong>Got it!</strong> Thanks for reaching out. We'll check it out and give you a shout soon!
       </div>
     </div>
   </div>
 </section>
 
-  <footer>
-    <p>&copy; 2025 Redline Rebels | Built with Spark and Fuel</p>
-  </footer>
+  <footer style="background-color: #050505; padding: 50px 0; border-top: 1px solid #1a1a1a;">
+  <div class="container text-center">
+    <div class="social-links" style="margin-bottom: 30px;">
+      <h4 style="font-family: 'Bebas Neue'; letter-spacing: 2px; color: #888; margin-bottom: 20px;">Follow the Rebels</h4>
+      
+      <a href="https://instagram.com/redlinerebelsbe" target="_blank" class="social-icon" title="Instagram">
+        <i class="glyphicon glyphicon-camera"></i>
+      </a>
+
+      <!--<a href="https://tiktok.com/@yourhandle" target="_blank" class="social-icon" title="TikTok">
+        <i class="glyphicon glyphicon-facetime-video"></i>
+      </a> > --> 
+
+      <a href="mailto:redlinerebels25@email.com" class="social-icon" title="Email Us">
+        <i class="glyphicon glyphicon-envelope"></i>
+      </a>
+    </div>
+
+    <p style="color: #444; font-size: 0.85rem; letter-spacing: 1px;">
+      &copy; 2025 <span class="red-part">REDLINE</span> <span class="gold-part">REBELS</span> | Built with Spark and Fuel
+    </p>
+  </div>
+</footer>
 
   <script src="/js/jquery-1.11.3.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>

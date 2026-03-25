@@ -486,6 +486,35 @@ textarea.custom-input {
   letter-spacing: 2px;
 }
 
+.join-section {
+  /* This creates a subtle glow coming from the section above */
+  border-top: 1px solid rgba(255, 215, 0, 0.1); 
+  padding-top: 80px;
+}
+
+/* ===================== Custom Redline Scrollbar ===================== */
+/* The width of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* The background of the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #0a0a0a; 
+}
+
+/* The actual draggable handle (The "Redline") */
+::-webkit-scrollbar-thumb {
+  background: #ff1e1e; 
+  border-radius: 10px;
+  border: 2px solid #0a0a0a; /* Creates a small gap around the red */
+}
+
+/* Handle on hover (Turns Gold) */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd700; 
+}
+
 /* ===================== Footer ===================== */
 footer {
   background-color: #111;
@@ -499,28 +528,34 @@ footer p {
   margin: 0;
 }
 
-/* ===================== Promo Items ===================== */
-.promo-item {
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  color: white;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  font-family: 'Bebas Neue', sans-serif;
-  transition: 0.3s ease;
+/* ===================== Footer Socials ===================== */
+.social-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: #111;
+  color: #ffd700; /* Gold Icons */
+  font-size: 1.5rem;
+  margin: 0 10px;
+  border-radius: 50%;
+  border: 1px solid #222;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none !important;
 }
 
-.promo-item:hover {
-  transform: scale(1.05);
+.social-icon:hover {
+  color: #fff;
+  background: #ff1e1e; /* Red Background on hover */
+  border-color: #ff1e1e;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 30, 30, 0.4);
 }
 
-.item-1 { background-image: url('images/launch.jpg'); }
-.item-2 { background-image: url('images/meets.jpg'); }
-.item-3 { background-image: url('images/nightrun.jpg'); }
+footer p {
+  text-transform: uppercase;
+  margin-top: 20px;
+}
 
 /* ===================== Logo Glow ===================== */
 .logo-glow {
