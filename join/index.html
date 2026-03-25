@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join | Redline Rebels</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/custom.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/index.html">
+          <span class="red-part">REDLINE</span>
+          <span class="gold-part">REBELS</span>
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li ><a href="/crew">Crew</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/events">Events</a></li>
+            <li class="active" id="active"><a href="/join">Join</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="content">
+    <div class="container text-center">
+      <h2 class="section-heading">Join the Crew</h2>
+
+      <form id="joinForm" style="max-width:500px;margin:auto;">
+        <input type="text" name="name" class="form-control" placeholder="Name (required)" required><br>
+        <input type="text" name="car" class="form-control" placeholder="Car (required)" required><br>
+        <input type="email" name="email" class="form-control" placeholder="Email (required)" required><br>
+        <input type="text" name="instagram" class="form-control" placeholder="Instagram (optional)"><br>
+        <textarea name="message" class="form-control" placeholder="Why do you want to join? (optional)" required></textarea><br>
+        <button class="btn btn-redline" type="submit">Submit</button>
+      </form>
+
+      <div id="successMessage" style="margin-top:20px;color:#ffd700;display:none;">
+        Application sent! We’ll contact you soon.
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Redline Rebels | Built with Spark and Fuel</p>
+  </footer>
+
+  <script src="/js/jquery-1.11.3.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("iQTvxdUSckDil3CD3");
+    })();
+
+    document.getElementById("joinForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_4365lyg", "template_ss3kvb8", this)
+        .then(function () {
+          document.getElementById("successMessage").style.display = "block";
+          document.getElementById("joinForm").reset();
+        }, function (error) {
+          alert("Failed to send. Try again later.");
+          console.error("EmailJS error:", error);
+        });
+    });
+  </script>
+</body>
+
+</html>
