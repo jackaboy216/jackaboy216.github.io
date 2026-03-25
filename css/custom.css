@@ -55,6 +55,8 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 120px;
+  padding-bottom: 120px;
 }
 
 header h1 {
@@ -89,7 +91,7 @@ header p {
 .content {
   padding: 80px 0;
   background-color: #141414;
-  flex: 1 0 auto;
+  flex: 1 0 auto; /* grow to fill space for sticky footer */
 }
 
 .content-2 {
@@ -103,7 +105,7 @@ footer {
   color: #777;
   padding: 30px 0;
   text-align: center;
-  flex-shrink: 0;
+  flex-shrink: 0; /* stick footer to bottom */
 }
 
 footer p {
